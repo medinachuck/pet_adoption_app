@@ -1,19 +1,23 @@
 # 1. Import Flask
 from flask import Flask, render_template, redirect, url_for, request, flash
-from fastai.basic_train import load_learner
-from fastai.vision import open_image
-from flask_cors import CORS,cross_origin
+#from fastai.basic_train import load_learner
+from fastai.vision.all import *
+#from fastai.vision import open_image
+#from flask_cors import CORS,cross_origin
 # import jpeg's
 import os
 from random import choice
 from flask import url_for, render_template
 from werkzeug.utils import secure_filename
-
+import pathlib
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
 # 2. Create an app
 app = Flask(__name__)
-CORS(app, support_credentials=True)
-learn = load_learner(path='./models', file='trained_model.pkl')
-classes = learn.data.classes
+#CORS(app, support_credentials=True)
+#learn = load_learner(path='./static/models', file='adoption_model.pkl')
+learn = load_learner("./static/models/adoption_model.pkl")
+#classes = learn.data.classes
 
 # User image upload
 UPLOAD_FOLDER = '/static/UPLOAD_FOLDER'
@@ -43,6 +47,7 @@ def upload_file():
 
             
             #Then with the results pass to a results page and redirect
+            
             return redirect('/')
     return 
 
