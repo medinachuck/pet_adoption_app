@@ -61,8 +61,12 @@ def upload_file():
 def index():
     return render_template('poundpuppy.html')
 
+# about page route
+@app.route("/about")
+def about():
+    return render_template('about.html')
 
-
+#
 @app.route("/api/sen")
 def sen_data():
 
@@ -115,4 +119,4 @@ def random_image():
 if __name__ == "__main__":
     app.run(debug=True)
 
-#5. User input for pet image
+
