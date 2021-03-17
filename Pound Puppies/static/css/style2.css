@@ -1,0 +1,169 @@
+.iframeContainer {
+    padding: 20px;
+    border: 1px solid #e3e3e3;
+  }
+  
+  /* Sticky Footer rules (https://getbootstrap.com/examples/sticky-footer/) */
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    /* Padding bottom by footer height */
+    padding-bottom: 80px;
+    background-color: #C8D0D9;
+  }
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* Set the fixed height of the footer here */
+    /* height: 10px; */
+    /* padding-top: 20px; */
+    /* padding-bottom: 40px; */
+    /* text-align: center; */
+    right: 0;
+    left: 0;
+    /* min-height: 100px; */
+    text-align: center;
+    background-color: #C8D0D9;
+  }
+  
+  .footer > .bottom {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+  }
+  
+  .footer > .footer-data {
+    position: right
+  }
+  
+  /* #footer p {
+    margin: 0;
+    font-size: 16px;
+  } */
+  
+  .form-control-primary {
+    margin: 10px;
+    opacity: 0.2;
+    border-radius: 2px;
+  }
+  
+  .sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 100;
+    padding: 70px 0 0 10px;
+    border-right: 1px solid #d3d3d3;
+  }
+  
+  .left-sidebar {
+    position: sticky;
+    top:0;
+    height: calc(100vh - 70px)
+  }
+  
+  .sidebar-nav li .nav-link {
+    color: #333;
+    font-weight: 500;
+  }
+  
+  /* Jumbotron image and text */
+  .hero1 {
+    background: url('../img/IMG_9519.jpeg') no-repeat center center;
+    background-size: contain;
+    /* height: 50%; */
+    position: relative;
+    height: 550px;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  #jumbotron-title {
+    padding-top: 70px;
+    color: #C8D0D9;
+  }
+  
+  /* Button group */
+  .bottom-left { 
+    bottom: 0; 
+    left: 0;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  } 
+  
+  .bottom-center { 
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%);
+    margin-bottom: 10px; 
+  } 
+  .bottom-right { 
+    bottom: 0; 
+    right: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  } 
+  
+  .btn-secondary {
+    background-color: #29a072;
+  }
+  
+  .dropdown-menu {
+    background-color: #d7e7fc;
+  }
+  
+  /* Navbar */
+  .bg-primary {
+    background-color: #1170AA!important;
+  }
+  
+  .nav-link {
+    color: white!important;
+  }
+
+  #upload-img {
+    width: 320px; 
+    height: 320px;
+  }
+  
+  /* Mobile Rules */
+  @media screen and (max-width: 575px) {
+    #jumbotron-title {
+      font-size: 1.75rem;
+    }
+    #result-bar{
+        margin-top: 50px;
+    }
+  }
+
+  @media screen and (max-width: 775px) {
+    #upload-img {
+        width: 220px;
+        height: 220px;
+    }
+   }
+  
+  /* About Page CSS */
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  
+  .bg-1 {
+    background-color:  #c05c04;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  .bg-2 {
+    background-color: rgb(148, 36, 36);
+    color: white;
+    margin-top: 10px;
+  }

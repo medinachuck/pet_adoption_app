@@ -12,7 +12,7 @@
   body {
     /* Padding bottom by footer height */
     padding-bottom: 80px;
-    background-color: rgb(247, 226, 202);
+    background-color: #C8D0D9;
   }
   
   .footer {
@@ -27,7 +27,7 @@
     left: 0;
     /* min-height: 100px; */
     text-align: center;
-    background-color: #f5f5f5;
+    background-color: #C8D0D9;
   }
   
   .footer > .bottom {
@@ -87,7 +87,7 @@
   
   #jumbotron-title {
     padding-top: 70px;
-    color: white;
+    color: #C8D0D9;
   }
   
   /* Button group */
@@ -112,16 +112,27 @@
   } 
   
   .btn-secondary {
-    background-color: #a012a5;
+    background-color:  #29a072;
+  }
+
+  .dropdown-menu {
+    background-color: #d7e7fc;
   }
   
   /* Navbar */
   .bg-primary {
-    background-color: rgb(110, 21, 170)!important;
+    background-color: #1170AA!important;
   }
   
   .nav-link {
     color: white!important;
+  }
+
+  /* Tableau */
+  .centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   /* Mobile Rules */
@@ -138,7 +149,7 @@
   }
   
   .bg-1 {
-    background-color: rgb(168, 47, 83);
+    background-color: #c05c04;
     color: white;
     margin-top: 10px;
   }
