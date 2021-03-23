@@ -24,7 +24,6 @@ app = Flask(__name__)
 # User image upload
 UPLOAD_FOLDER = '/static/UPLOAD_FOLDER'
 ALLOWED_EXTENSIONS = { 'png', 'jpg', 'jpeg', 'gif'}
-
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/uploader', methods=['POST'])
@@ -45,15 +44,9 @@ def upload_file():
             file.save(os.path.join('static', 'UPLOAD_FOLDER', filename))
             #Use the filename with the filepath as an input to the model.predict()
             
-
-
-            
             #Then with the results pass to a results page and redirect
             return redirect('/')
     return 
-
-
-
 
 
 # BASICS
@@ -62,47 +55,22 @@ def upload_file():
 def index():
     return render_template('poundpuppy.html')
 
+@app.route("/about")
+def about():
+    return render_template('about.html')    
 
-
-@app.route("/api/sen")
-def sen_data():
-
-    # SQL to json guide: https://stackoverflow.com/questions/3286525/return-sql-table-as-json-in-python 
-
-    # add json to the /api route
-
-    # go back to main when done
-    return data_jsons.sen_json()
-
-@app.route("/api/attr")
-def attr_data():
-
-    # SQL to json guide: https://stackoverflow.com/questions/3286525/return-sql-table-as-json-in-python 
-
-    # add json to the /api route
-
-    # go back to main when done
-    return data_jsons.attr_json()
-
-
-@app.route("/api/relig")
-def relig_json():
-
-    # SQL to json guide: https://stackoverflow.com/questions/3286525/return-sql-table-as-json-in-python 
-
-    # add json to the /api route
-
-    # go back to main when done
-    return data_jsons.relig_json()
-
-# more routes to include:
-# other Pet adoption Pages
+@app.route("/result")
+def result():
+    return render_template('results.html')  
 
 
 
+# @app.route("/api/sen")
+# def sen_data():
+#     # SQL to json guide: https://stackoverflow.com/questions/3286525/return-sql-table-as-json-in-python 
+#     return data_jsons.sen_json()
 
-#     # Return template and data
-#     return render_template("index.html", vacation=destination_data)
+
 
 # code for jpeg import
 @app.route('/random_image')
