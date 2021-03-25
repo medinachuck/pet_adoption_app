@@ -20,25 +20,14 @@
         <!-- NAVBAR -->
 
         <nav class="navbar navbar-dark bg-primary fixed-top flex-md-nowrap p-0 shadow">
-          <ul class="navbar-nav px-3">
-              <li class="nav-item text-nowrap">
-                  <a class="nav-link col-sm-3 col-md-2 mr-0" href="/">Pound Puppies</a>
-              </li>
-          </ul>    
-          
-          <ul class="navbar-nav px-3">
-              <li class="nav-item text-nowrap">
-                <!-- <a class="nav-link" href="/about">About</a>-->
-                <a class="nav-link" href="/results">Results</a>
-              </li>
-          </ul>
-          
-          <ul class="navbar-nav px-3">
-              <li class="nav-item text-nowrap">
-              <!-- <a class="nav-link" href="http://127.0.0.1:5000/about">About</a> -->
-              <a class="nav-link" href="/about">About</a>
-              </li>
-          </ul>
+            <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/">Pound Puppies</a>
+
+            <ul class="navbar-nav px-3">
+                <li class="nav-item text-nowrap">
+                  <a class="nav-link" href="/results">results</a>
+                  <a class="nav-link" href="/abouts">About</a>
+                </li>
+            </ul>
         </nav>
 
         <br>
@@ -52,19 +41,27 @@
         <br>
 
         <div class="container">
-            <div class="row">
-              <div class="col-sm-6">
-                <img id='upload-img' src= '../static/UPLOAD_FOLDER/IMG_9093.jpeg' >
-                <!-- <img src= '../static/UPLOAD_FOLDER/IMG_9093.jpeg' width = '800px' height='800px'> -->
-              </div>
-              <div class="col-sm-3">
-                <h1> Your photo is of a dog or cat </h1>
-              </div>
-              <div class="col-sm-3">
-                <h1> The breed of your animal is... </h1>
-              </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <img id='upload-img' src= '{{petinfo.path_to_img}}' >
+              <!-- <img src= '../static/UPLOAD_FOLDER/IMG_9093.jpeg' width = '800px' height='800px'> -->
+            </div>
+            <div class="col-sm-3">
+              <h1> Your pet is a...</h1>
+              <h2 style='color: #50744c'>{{petinfo.type}}</h2>
+              <br>
+              <h1> Your pet's breed is likely...</h1>
+              <h2 style='color: #50744c'>{{petinfo.breed}}</h2>
+            </div>
+            <div class="col-sm-3">
+              <h1> Your pet's Adoptibility Score is {{petinfo.adopt}} </h1>
+              <!-- <h2 style='color: #50744c'>2</h2>
+              <h3 style='color: #d8a310'>Your pet will most likely be adopted within the first month of entering the shelter.</h3> -->
             </div>
           </div>
+        </div>
+
+
 
 
         <!-- <div class="container">
